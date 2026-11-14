@@ -5,16 +5,16 @@ declare(strict_types=1);
 namespace AssoConnect\Tests;
 
 use AssoConnect\LibphoneDOMTOM;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 /**
  *  @author Sylvain Fabre
  */
+#[CoversMethod(LibphoneDOMTOM::class, 'parse')]
 class AssoConnectLibphoneDOMTOMTest extends \PHPUnit\Framework\TestCase
 {
-    /**
-     * @covers \AssoConnect\LibphoneDOMTOM::parse
-     * @dataProvider providerParse
-     */
+    #[DataProvider('providerParse')]
     public function testParse(string $input, string $output): void
     {
         self::assertSame($output, LibphoneDOMTOM::parse($input));
