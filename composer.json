@@ -10,7 +10,7 @@
     ],
     "type": "project",
     "require": {
-        "php": "^8.4"
+        "php": "^8.5"
     },
     "require-dev": {
         "assoconnect/php-quality-config": "^2.2"
