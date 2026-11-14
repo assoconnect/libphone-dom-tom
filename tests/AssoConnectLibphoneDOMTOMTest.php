@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace AssoConnect\Tests;
 
 use AssoConnect\LibphoneDOMTOM;
-use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 
 /**
  *  @author Sylvain Fabre
  */
-#[CoversMethod(LibphoneDOMTOM::class, 'parse')]
+#[CoversClass(LibphoneDOMTOM::class)]
 class AssoConnectLibphoneDOMTOMTest extends \PHPUnit\Framework\TestCase
 {
     #[DataProvider('providerParse')]
